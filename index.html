@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report Pro - SEO & Tech Oracle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg-white: #FFFFFF;
+        --bg-panel: #F8F8FA;
+        --bg-sidebar: #F0F0F2;
+        --sidebar-active: #E0E0E2;
+        --accent-blue: #6B72F0;
+        --accent-purple: #9F7AEA;
+        --text-main: #333333;
+        --text-secondary: #666666;
+        --border-color: #E5E7EB;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body { 
+        font-family: 'Plus Jakarta Sans', sans-serif; 
+        background-color: var(--bg-white); 
+        color: var(--text-main);
+      }
+      .oracle-card {
+        background: var(--bg-panel);
+        border-radius: 24px;
+        border: 1px solid var(--border-color);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .oracle-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04);
+      }
+      .sidebar-item {
+        border-radius: 12px;
+        transition: all 0.2s;
+      }
+      .sidebar-active {
+        background-color: var(--sidebar-active);
+        color: var(--accent-blue);
+      }
+      
+      /* Smooth transitions for navigation */
+      .view-transition {
+        animation: fadeIn 0.4s ease-out;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      /* Scrollbar Styling */
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+
+      /* Action Button Effects */
+      .btn-oracle {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .btn-oracle:hover {
+        opacity: 0.9;
+        box-shadow: 0 0 15px rgba(107, 114, 240, 0.5);
+        transform: scale(1.02);
+      }
+      .btn-oracle:active {
+        transform: scale(0.98);
+      }
+
+      /* Neon Highlight for Quick Wins Zone */
+      .quick-win-quadrant {
+        background: radial-gradient(circle at top left, rgba(107, 114, 240, 0.05) 0%, transparent 70%);
+        border-top-left-radius: 20px;
+      }
+      .quick-win-glow {
+        box-shadow: 0 0 20px rgba(107, 114, 240, 0.15);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
